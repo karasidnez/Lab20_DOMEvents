@@ -4,6 +4,7 @@ const text = document.querySelector(".text");
 const input = document.getElementById("nameInput");
 const button = document.getElementById("showName");
 const output = document.getElementById("output");
+
 console.log(title);
 console.log(text);
 title.textContent = "DOM изменён через js!";
@@ -33,3 +34,12 @@ button.addEventListener("click", () => {
     output.style.color = "red";
   }
 });
+
+const clearButton = document.getElementById("clearButton");
+clearButton.addEventListener("click", () => {
+  input.value = "";
+  output.textContent = "";
+});
+
+output.style.color = "";
+input.focus();
